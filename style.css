@@ -316,3 +316,10 @@ footer {
 @keyframes scroll {
   to { transform: translateX(-50%); }
 }
+.lightbox:target {
+  display: flex;
+}
+
+.work-item a {
+  display: block;
+}
