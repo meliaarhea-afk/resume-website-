@@ -70,30 +70,60 @@
       </article>
     </div>
     </section>
-      <section id="work" class="section">
-      <h2>Selected Work </h2>
+    <section id="work" class="section">
+      <h2>Selected Work</h2>
       <div class="gallery">
         <figure class="work-item">
-          <img src="work1.jpg" alt="Metamorphosis, styling and editorial" height="200">
-          <figcaption>Metamorphosis<span>Styling / Editorial</span></figcaption>
+          <a href="#view1">
+            <img src="work1.jpg" alt="Metamorphosis, styling and editorial">
+            <figcaption>Metamorphosis<span>Styling / Editorial</span></figcaption>
+          </a>
         </figure>
         <figure class="work-item">
-          <img src="work2.jpg" alt="Metamorphosis, Editorial Styling" height="100">
-          <figcaption>Metamorphosis<span>Editorial Styling</span></figcaption>
+          <a href="#view2">
+            <img src="work2.jpg" alt="Metamorphosis, editorial styling">
+            <figcaption>Metamorphosis<span>Graphic Design</span></figcaption>
+          </a>
         </figure>
         <figure class="work-item">
-          <img src="work3.jpg" alt="Metamorphosis, creative direction" height="200">
-          <figcaption>Metamorphosis<span>Creative Direction</span></figcaption>
+          <a href="#view3">
+            <img src="work3.jpg" alt="Metamorphosis, creative direction">
+            <figcaption>Metamorphosis<span>Creative Direction</span></figcaption>
+          </a>
         </figure>
         <figure class="work-item">
-          <img src="work4.jpg" alt="Metamorphosis, fashion film" height="200">
-          <figcaption>Metamorphosis<span>Fashion Film</span></figcaption>
+          <a href="#view4">
+            <img src="work4.jpg" alt="Metamorphosis, fashion film">
+            <figcaption>Metamorphosis<span>Fashion Film</span></figcaption>
+          </a>
         </figure>
         <figure class="work-item">
-          <img src="work5.jpg" alt="Metamorphosis, editorial" height="200">
-          <figcaption>Metamorphosis<span>Editorial</span></figcaption>
+          <a href="#view5">
+            <img src="work5.jpg" alt="Metamorphosis, editorial">
+            <figcaption>Metamorphosis<span>Editorial</span></figcaption>
+          </a>
         </figure>
       </div>
+      <a href="#work" class="lightbox" id="view1">
+        <img src="work1.jpg" alt="Metamorphosis, styling and editorial">
+        <p>Metamorphosis, styling and editorial</p>
+      </a>
+      <a href="#work" class="lightbox" id="view2">
+        <img src="work2.jpg" alt="Metamorphosis, editorial styling">
+        <p>Metamorphosis, editorial styling</p>
+      </a>
+      <a href="#work" class="lightbox" id="view3">
+        <img src="work3.jpg" alt="Metamorphosis, creative direction">
+        <p>Metamorphosis, creative direction</p>
+      </a>
+      <a href="#work" class="lightbox" id="view4">
+        <img src="work4.jpg" alt="Metamorphosis, fashion film">
+        <p>Metamorphosis, fashion film</p>
+      </a>
+      <a href="#work" class="lightbox" id="view5">
+        <img src="work5.jpg" alt="Metamorphosis, editorial">
+        <p>Metamorphosis, editorial</p>
+      </a>
     </section>
   <section id="experience" class="section">
    
@@ -127,40 +157,7 @@
     </p>
   </section>
 </main>
-  <!-- Image viewer -->
-  <div id="lightbox" class="lightbox">
-    <button class="lightbox-close" aria-label="Close">&times;</button>
-    <img id="lightbox-img" src="" alt="">
-    <p id="lightbox-caption"></p>
-  </div>
-
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-
-    // Open: click any gallery image
-    document.querySelectorAll('.work-item').forEach(function (item) {
-      item.addEventListener('click', function () {
-        const img = item.querySelector('img');
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-        lightboxCaption.textContent = img.alt;
-        lightbox.classList.add('open');
-      });
-    });
-
-    // Close: click anywhere on the dark background
-    lightbox.addEventListener('click', function () {
-      lightbox.classList.remove('open');
-    });
-
-    // Close: press Esc
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        lightbox.classList.remove('open');
-      }
-    });
+  
   </script>
 </body>
 </html>
