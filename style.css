@@ -316,18 +316,3 @@ footer {
 @keyframes scroll {
   to { transform: translateX(-50%); }
 }
-
-/* 5. Sections fade in as you scroll (works in Chrome) */
-@supports (animation-timeline: view()) {
-  .section {
-    animation: fadeUp linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 35%;
-  }
-}
-
-/* 6. Bronze text highlight */
-::selection {
-  background-color: #8c6a4f;
-  color: #ffffff;
-}
